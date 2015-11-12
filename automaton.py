@@ -26,7 +26,7 @@ class Automaton:
 
         for x in word:
             new_state = self.__transitions[st].get(x, None)
-            if not new_state:
+            if new_state is None:
                 return False
             st = new_state
 
